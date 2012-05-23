@@ -13,6 +13,6 @@ function getHTMLOfSelection() {
 document.addEventListener('mouseup',function(event) {
     var sel = getHTMLOfSelection();
     if(sel.length) {
-        chrome.extension.sendRequest({'message':'convertedMarkdown','data': sel},function(response){alert(response);});
+        chrome.extension.sendRequest({'message':'convertedMarkdown','data': sel},function(response){console.log("response",response);});
 	}
 });
