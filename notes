@@ -1,0 +1,14 @@
+Following tags are converted, all attributes are removed.
+
+<code>/<pre>
+<br />
+<i>/<em>
+<b>/<strong>
+<a>
+<h(1-6)>
+<hr />
+<ol>/<ul>
+<blockquote>
+<img>
+
+... rest is untouched and left for inline HTML

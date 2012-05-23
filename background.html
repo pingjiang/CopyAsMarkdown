@@ -70,7 +70,13 @@ var toMarkdown = function(string) {
             title = attrs.match(attrRegExp('title'));
         return '![' + (alt && alt[1] ? alt[1] : '') + ']' + '(' + src[1] + (title && title[1] ? ' "' + title[1] + '"' : '') + ')';
       }
-    }
+    },
+    { /* Experimental - remove all div and span tags. What purpose would they serve here? */
+	  patterns: ['div','span'],
+	  replacement: function(str, attrs, innerHTML) {
+		return innerHTML;
+	  }
+	}
   ];
   
   for(var i = 0, len = ELEMENTS.length; i < len; i++) {
